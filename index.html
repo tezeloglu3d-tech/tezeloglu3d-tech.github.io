@@ -1,134 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tezeloğlu 3D | Ücretsiz 3D Modeller</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            color: #38bdf8;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
-
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-
-        .card {
-            background-color: #1e293b;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #334155;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
-            border-color: #38bdf8;
-        }
-
-        .card-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background-color: #334155;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            color: #f1f5f9;
-        }
-
-        .card-info {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin-bottom: 15px;
-        }
-
-        .download-btn {
-            display: block;
-            text-align: center;
-            background-color: #0284c7;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.2s;
-        }
-
-        .download-btn:hover {
-            background-color: #0ea5e9;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 40px;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Tezeloğlu 3D</title>
 </head>
-<body>
+<body style="font-family: sans-serif; margin: 0; background-color: #f4f4f4;">
 
-    <header>
-        <h1>TEZELOĞLU 3D</h1>
-        <p>By Tezeloğlu | Ücretsiz ve Özgün 3D Tasarımlar, STL Deposu</p>
+    <header style="display: flex; align-items: center; gap: 15px; padding: 15px 30px; background-color: #005088; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        <img src="logo.png" style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid white; background-color: white; object-fit: cover;">
+        <h1 style="margin: 0;">TEZELOĞLU 3D</h1>
     </header>
 
-    <div class="gallery-container">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/400x220/334155/fff?text=LIFT+Tasarimi" alt="3D Model" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">LIFT - Asansör Sistemi</h3>
-                <p class="card-info">Format: STL | Ücretsiz</p>
-                <a href="https://drive.google.com/file/d/19_IJIY7J8yF5DtGif9pY0eZZUeOOlf8y/view?usp=sharing" target="_blank" class="download-btn">Ücretsiz İndir (Drive)</a>
-            </div>
+    <div style="display: flex; justify-content: center; padding: 50px 20px;">
+        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; max-width: 350px;">
+            <div style="font-size: 60px; margin-bottom: 20px;">🏗️</div>
+            <h2 style="margin: 0 0 10px;">Asansör (LIFT) Modeli</h2>
+            <p style="color: #666;">Ücretsiz STL dosyasını indirin.</p>
+            <a href="https://drive.google.com/file/d/19_IJIY7J8yF5DtGif9pY0eZZUeOOlf8y/view?usp=sharing" style="display: inline-block; background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 15px;">ÜCRETSİZ İNDİR</a>
         </div>
-
     </div>
 
-    <footer>
-        <p>&copy; 2026 Tezeloğlu 3D. Tüm Hakları Saklıdır.</p>
+    <footer style="background-color: #222; color: #ccc; text-align: center; padding: 30px; margin-top: auto;">
+        <p style="margin: 0; font-size: 16px;">⚠️ <span style="color: #ffcc00;">Bilgi:</span> .stl ve ya diğer uzantılar için program gerekebilir.</p>
+        <p style="margin: 10px 0 0; font-size: 14px; opacity: 0.7;">&copy; 2026 Tezeloğlu 3D Tasarım Deposu</p>
     </footer>
 
 </body>
