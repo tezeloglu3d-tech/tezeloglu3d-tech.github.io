@@ -1,29 +1,256 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta name="google-site-verification" content="3QeBL6dsuYGwmpl2ZlnqiItcPSFt5hkIZQx9nkYme50" />
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="3QeBL6dsuYGwmp12Z1nqiItcPSFt5hkIZQx9nkYme50" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tezeloğlu 3D</title>
-</head>
-<body style="font-family: sans-serif; margin: 0; background-color: #f4f4f4; display: flex; flex-direction: column; min-height: 100vh;">
+    <style>
+        /* Genel Sayfa Düzeni */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Üst Menü (Header) */
+        header {
+            background-color: #005088;
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
 
-    <header style="padding: 20px 30px; background-color: #005088; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-        <h1 style="margin: 0; font-size: 26px; letter-spacing: 1px;">TEZELOĞLU 3D</h1>
+        /* Ana Konteyner */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Hakkında Bölümü */
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid #005088;
+        }
+        .about-section h2 {
+            color: #005088;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .about-section p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
+        }
+        .about-section em {
+            display: block;
+            margin-top: 15px;
+            color: #005088;
+            font-weight: bold;
+        }
+
+        /* Bölümler Başlığı */
+        .section-title {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Kategori Kartları Izgarası (Grid) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* Kart Tasarımı */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            color: #005088;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #005088;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #003860;
+        }
+
+        /* İletişim Bölümü */
+        .contact-section {
+            background: #eef5fc;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .contact-section h2 {
+            color: #005088;
+            margin-bottom: 10px;
+        }
+        .contact-section p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .contact-section a {
+            color: #005088;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #005088;
+        }
+
+        /* Alt Bilgi (Footer) */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TEZELOĞLU 3D</h1>
     </header>
 
-    <div style="display: flex; justify-content: center; padding: 50px 20px; flex: 1;">
-        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; max-width: 350px; height: fit-content;">
-            <div style="font-size: 60px; margin-bottom: 20px;">🏗️</div>
-            <h2 style="margin: 0 0 10px;">Asansör (LIFT) Modeli</h2>
-            <p style="color: #666;">Ücretsiz STL dosyasını indirin.</p>
-            <a href="https://drive.google.com/file/d/19_IJIY7J8yF5DtGif9pY0eZZUeOOlf8y/view?usp=sharing" style="display: inline-block; background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 15px;">ÜCRETSİZ İNDİR</a>
+    <div class="container">
+        
+        <section class="about-section">
+            <h2>⚡ Hakkında</h2>
+            <p><strong>Tezeloğlu 3D</strong>, sadece bugünün teknolojisini kullanan değil, Türkiye'nin geleceğini ve gelecek nesillerin vizyonunu inşa etmeyi hedefleyen bağımsız bir mühendislik ve inovasyon oluşumudur.</p>
+            <p>Amacımız; robotik, 3D tasarım, yazılım ve elektronik dünyasındaki bilgi birikimini, yerli ve millî teknoloji üretme heyecanıyla birleştirerek yarının dünyasına güçlü adımlar atmaktır. Geliştirdiğimiz projeler, paylaştığımız devre şemaları ve açık kaynaklı kodlarla, yeni nesillerin teknoloji üreten birer lidere dönüşmesine katkı sağlamayı kendimize görev biliyoruz.</p>
+            <em>"Gelecek, onu bugünden inşa edenlerin olacaktır."</em>
+        </section>
+
+        <h2 class="section-title">📁 Proje ve Kaynak Kategorileri</h2>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div>
+                    <div class="card-icon">🛠️</div>
+                    <h3>3D Tasarımlar</h3>
+                    <p>Ürettiğimiz ve geliştirdiğimiz tüm 3D modeller, mekanik parçalar ve STL dosyaları.</p>
+                </div>
+               <a href="https://drive.google.com/file/d/19_IJIY7J8yF5DtGif9pY0eZZUeOOlf8y/view?usp=sharing" class="btn" target="_blank">Asansör Modelini İndir</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-icon">🤖</div>
+                    <h3>Arduino Kodları</h3>
+                    <p>Robotik projeler, sensör kontrolleri ve akıllı sistemler için yazdığımız açık kaynaklı kodlar.</p>
+                </div>
+                <a href="#" class="btn">Çok Yakında</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-icon">🗺️</div>
+                    <h3>Devre Şemaları</h3>
+                    <p>Projelerimizin donanım bağlantı rehberleri, pin dizilimleri ve teknik çizimleri.</p>
+                </div>
+                <a href="#" class="btn">Çok Yakında</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-icon">💻</div>
+                    <h3>Devre Simülasyonları</h3>
+                    <p>Projelerin fiziksel üretime geçmeden önceki dijital testleri ve simülasyon linkleri.</p>
+                </div>
+                <a href="#" class="btn">Çok Yakında</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-icon)📚">📚</div>
+                    <h3>E-Kitaplar</h3>
+                    <p>Elektronik, yazılım ve mühendislik alanında kendinizi geliştirebileceğiniz rehber kaynaklar.</p>
+                </div>
+                <a href="#" class="btn">Çok Yakında</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-icon">📊</div>
+                    <h3>Sunumlar</h3>
+                    <p>Geliştirdiğimiz projelerin tanıtım slaytları, proje raporları ve sunum dosyaları.</p>
+                </div>
+                <a href="#" class="btn">Çok Yakında</a>
+            </div>
+
         </div>
+
+        <section class="contact-section">
+            <h2>📩 İletişim</h2>
+            <p>Görüş ve önerileriniz için: <a href="mailto:tezeloglu3d@gmail.com">tezeloglu3d@gmail.com</a></p>
+        </section>
+
     </div>
 
-    <footer style="background-color: #222; color: #ccc; text-align: center; padding: 25px; margin-top: auto;">
-        <p style="margin: 0; font-size: 15px;">⚠️ <span style="color: #ffcc00;">Bilgi:</span> .stl ve ya diğer uzantılar için program gerekebilir.</p>
-        <p style="margin: 10px 0 0; font-size: 13px; opacity: 0.6;">&copy; 2026 Tezeloğlu 3D Tasarım Deposu</p>
+    <footer>
+        <p>&copy; 2026 Tezeloğlu 3D. Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
